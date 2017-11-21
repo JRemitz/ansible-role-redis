@@ -64,6 +64,9 @@ redis_disabled_commands: []
 #  - DEBUG
 
 redis_cluster: False
+redis_cluster_node_timeout: 15000
+redis_cluster_slave_validity_factor: 10
+redis_cluster_migration_barrier: 1
 
 # Allow for adding a Redis slave within the config
 redis_slaveof: ''

@@ -60,6 +60,9 @@ rename-command {{ redis_disabled_command }} ""
 
 {% if redis_cluster %}
 cluster-enabled yes
+cluster-node-timeout {{ redis_cluster_node_timeout }}
+cluster-slave-validity-factor {{ redis_cluster_slave_validity_factor }}
+cluster-migration-barrier {{ redis_cluster_migration_barrier }}
 {% endif %}
 
 {% if redis_slaveof %}
