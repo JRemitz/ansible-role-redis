@@ -20,7 +20,7 @@
     daemon_reload: yes
     name: redis-server
     enabled: no
-  when: redis_service_file | changed
+  when: redis_service_file is changed
 
 - name: Remove default files since names will conflict
   file:

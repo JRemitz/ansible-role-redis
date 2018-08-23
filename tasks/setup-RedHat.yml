@@ -21,7 +21,7 @@
     state: stopped
     daemon_reload: yes
     name: "{{ redis_daemon }}"
-  when: redis_service_file | changed
+  when: redis_service_file is changed
 
 # Setup/install tasks.
 - name: Create default directories
