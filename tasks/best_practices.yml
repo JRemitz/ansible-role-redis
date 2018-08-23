@@ -28,4 +28,4 @@
     name: "{{ redis_daemon }}_disable_thp"
     enabled: yes
     state: started
-  when: disabled_thp is defined and disabled_thp | changed
+  when: disabled_thp is defined and disabled_thp is changed
